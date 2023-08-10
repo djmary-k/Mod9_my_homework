@@ -44,9 +44,10 @@ def phone_handler(data):
     return CONTACTS[name]
 
 def show_all_handler(*args):
+    info = 'These are your contacts in the phonebook.'
     for name, phone in CONTACTS.items():
-        print(f'{name} {phone}')    
-    return 'These are your contacts in the phonebook.'
+        info += f'\n{name} {phone}'
+    return info
 
 
 COMMANDS = {
